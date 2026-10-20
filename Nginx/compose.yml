@@ -14,8 +14,8 @@ services:
       context: https://github.com/Shevchenko-Eduard/Aumsu.git
       dockerfile: Dockerfile
       args:
-        # NUXT_PUBLIC_SITE_URL: https://${DOMAIN}
-        NUXT_PUBLIC_SITE_URL: http://localhost
+        NUXT_PUBLIC_SITE_URL: https://${DOMAIN}
+        # NUXT_PUBLIC_SITE_URL: http://localhost
     image: aumsu-frontend:latest
     ports:
       - "${PORT_AUMSU}:${PORT_AUMSU}"
