@@ -10,13 +10,13 @@ services:
       - nginx-logs:/var/log/nginx/
 
   aumsu:
-    build:
-      context: https://github.com/Shevchenko-Eduard/Aumsu.git
-      dockerfile: Dockerfile
-      args:
-        NUXT_PUBLIC_SITE_URL: https://${DOMAIN}
-        # NUXT_PUBLIC_SITE_URL: http://localhost
-    image: aumsu-frontend:latest
+    # build:
+    #   context: https://github.com/Shevchenko-Eduard/Aumsu.git
+    #   dockerfile: Dockerfile
+    #   args:
+    #     NUXT_PUBLIC_SITE_URL: https://${DOMAIN}
+    #     # NUXT_PUBLIC_SITE_URL: http://localhost
+    image: shedward/aumsu-frontend:latest
     ports:
       - "${PORT_AUMSU}:${PORT_AUMSU}"
     environment:
