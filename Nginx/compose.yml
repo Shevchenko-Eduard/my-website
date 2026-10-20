@@ -6,6 +6,7 @@ services:
     network_mode: host
     image: nginx:latest
     volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
       - ./check_environment.sh:/docker-entrypoint.d/40-check_environment.sh:ro
       - nginx-logs:/var/log/nginx/
 
